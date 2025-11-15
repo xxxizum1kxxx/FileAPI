@@ -1,0 +1,24 @@
+# Go Build
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Config & Information
+.env
+.env.*
+*.local.yaml
+*.local.yml
+*.local.json
+config.local.*
+*.log
