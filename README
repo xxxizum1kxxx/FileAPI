@@ -1,3 +1,9 @@
 # FileAPI
 
 A HTTP File Server
+
+## License
+This project is licensed under the MIT License. See [LICENSE](./LICENSE) for details.
+
+### Note on AI‑Generated Code
+This repository may include code generated or assisted by AI tools (e.g., Cursor). Such content may be subject to the terms of those tools or third‑party models and may not be fully covered by the MIT License. Please review and ensure compliance with the relevant licenses and terms before using, distributing, or commercializing such code.
