@@ -22,3 +22,6 @@ bin/
 *.local.json
 config.local.*
 *.log
+
+# test file path
+data/
