@@ -45,7 +45,20 @@ func GetLocalMetadata(path string) (Metadata, error) {
 	return m, nil
 }
 
-func GetLocalFile(path string) (bytes.Buffer, error) {
+func CreateLocalFile(path string, data []byte) error {
+	file, err := os.Create(path)
+	if err != nil {
+		return err
+	}
+	defer file.Close()
+	_, err = file.Write(data)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func ReadLocalFile(path string) (bytes.Buffer, error) {
 	file, err := os.Open(path)
 	if err != nil {
 		return bytes.Buffer{}, err
@@ -57,4 +70,21 @@ func GetLocalFile(path string) (bytes.Buffer, error) {
 		return bytes.Buffer{}, err
 	}
 	return *buf, nil
+}
+
+func UpdateLocalFile(path string, data []byte) error {
+	file, err := os.OpenFile(path, os.O_WRONLY, 0644)
+	if err != nil {
+		return err
+	}
+	defer file.Close()
+	_, err = file.Write(data)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func DeleteLocalFile(path string) error {
+	return os.Remove(path)
 }

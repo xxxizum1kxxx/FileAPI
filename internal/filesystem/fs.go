@@ -6,7 +6,7 @@ import (
 )
 
 func GetFile(path string) (bytes.Buffer, error) {
-	filebytes, err := GetLocalFile(path)
+	filebytes, err := ReadLocalFile(path)
 	if err != nil {
 		return bytes.Buffer{}, err
 	}
